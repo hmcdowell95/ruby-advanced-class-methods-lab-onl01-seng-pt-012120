@@ -47,7 +47,18 @@ class Song
   
   def self.new_from_filename(name)
     song = self.new
-    
+    z = name.split(", ")
+    z.each do |x|
+      y = x.chars
+      if y.include?(".")
+        a = y.join
+        b = a.split(".")
+        b.delete(b[-1])
+        c = b.join
+        song.name = c
+      else
+        song.artist_name = y.join 
+      end
     
     end
   end
