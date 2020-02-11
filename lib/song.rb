@@ -73,8 +73,8 @@ class Song
         @artist_name = y.join 
       end
     end
-    c = name
-    name.save
+    c.name = name
+    c.save
   end
   
   def self.destroy_all
