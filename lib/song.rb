@@ -59,9 +59,9 @@ class Song
         song.name = c
       else
         song.artist_name = y.join 
-      end
-    
+      end 
     end
+    song
   end
   
   def self.create_from_filename(name)
