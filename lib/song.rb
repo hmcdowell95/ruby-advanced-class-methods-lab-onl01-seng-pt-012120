@@ -74,7 +74,7 @@ class Song
       end
     end
     c = name
-    c.save
+    name.save
   end
   
   def self.destroy_all
