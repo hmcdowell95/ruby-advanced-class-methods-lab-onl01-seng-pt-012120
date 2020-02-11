@@ -53,9 +53,9 @@ class Song
         a = y.join
         b = a.split(".")
         b.delete(b[-1])
-        @name = b.join
+        c = b.join
       else
-        @artist_name = y.join 
+         = y.join 
       end
     end
   end
