@@ -46,6 +46,7 @@ class Song
   end
   
   def self.new_from_filename(name)
+    song = self.new
     z = name.split(" - ")
     z.each do |x|
       y = x.chars
@@ -54,13 +55,15 @@ class Song
         b = a.split(".")
         b.delete(b[-1])
         c = b.join
+        song.name = c
       else
-         = y.join 
+        song.artist_name = y.join 
       end
     end
   end
   
   def self.create_from_filename(name)
+    song = self.new
     z = name.split(" - ")
     z.each do |x|
       y = x.chars
@@ -69,12 +72,12 @@ class Song
         b = a.split(".")
         b.delete(b[-1])
         c = b.join
+        song.name = c
       else
-        @artist_name = y.join 
+        song.artist_name = y.join 
       end
     end
-    c.name = name
-    c.save
+    song.save
   end
   
   def self.destroy_all
