@@ -47,7 +47,7 @@ class Song
   
   def self.new_from_filename(name)
     song = self.new
-    z = name.split(", ")
+    z = name.split(" - ")
     z.each do |x|
       y = x.chars
       if y.include?(".")
